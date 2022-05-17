@@ -1,0 +1,384 @@
+/*
+-----------------------------------------------------------------------
+  Sidebar CSS
+-----------------------------------------------------------------------
+*/
+
+.sidebar-area {
+  .widget-item {
+    border: 2px solid #efefef;
+    background-color: #f6f6f6;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding: 35px 28px 37px;
+    @media #{$lg-device} {
+      margin-bottom: 30px;
+      padding: 23px 16px 26px;
+    }
+    @media #{$md-device} {
+        margin-top: 50px;
+    }
+    .widget-title {
+      .title {
+        color: #343434;
+        font-weight: $font-weight-bold;
+        font-size: 18px;
+        line-height: 1;
+        margin-bottom: 18px;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .widget-search-box {
+    form {
+      .form-input-item {
+        position: relative;
+        input {
+          border: 1px solid #d9d9d9;
+          background-color: #f6f6f6;
+          border-radius: 15px;
+          color: #919090;
+          font-size: 14px;
+          height: 50px;
+          line-height: 50px;
+          padding: 10px 70px 10px 19px;
+          width: 100%;
+          @include placeholder {
+            color: #919090;
+          }
+        }
+        .btn-src {
+          border: none;
+          background-color: $theme-color;
+          border-radius: 0 15px 15px 0;
+          color: $white;
+          font-size: 18px;
+          position: absolute;
+          padding: 9px 23.65px;
+          height: 100%;
+          top: 0;
+          right: 0;
+          @include transition(all .4s ease-out);
+          &:hover {
+            background-color: $black;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+  .widget-categories {
+    ul {
+      margin: 0;
+      li {
+        border: 1px solid #d9d9d9;
+        border-radius: 15px;
+        margin-bottom: 10px;
+        padding: 0;
+        height: 48px;
+        line-height: 47px;
+        padding: 0 19px;
+        @include transition(all .3s ease-in-out);
+        &:last-child {
+          margin-bottom: 0;
+        }
+        a {
+          align-items: center;
+          color: #616161;
+          display: flex;
+          font-weight: 500;
+          font-size: 14px;
+          justify-content: space-between;
+            @include transition(all .3s ease-in-out);
+          span {
+            color: #494949;
+            font-size: 18px;
+            @include transition(all .3s ease-in-out);
+          }
+        }
+        &:hover {
+          background-color: $theme-color;
+          border-color: $theme-color;
+          a {
+            color: $white;
+                span {
+                color: $white;
+            }
+          }
+        }
+        &.active {
+          background-color: $theme-color;
+          border-color: $theme-color;
+          a {
+            color: $white;
+                span {
+                color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+  .widget-blog-post {
+    border-bottom: 1px solid #d9d9d9;
+    margin-bottom: 29px;
+    padding-bottom: 31px;
+    &:last-child {
+      border: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    ul {
+      margin: 0;
+      li {
+        display: flex;
+        .thumb {
+            margin-right: 16px;
+          img {
+            max-width: 98px;
+          }
+        }
+        .content {
+            align-self: center;
+            span {
+                color: $theme-color;
+                font-weight: 600;
+                font-size: 13px;
+                text-transform: uppercase;
+            }
+            h4 {
+                color: #383838;
+                font-weight: 600;
+                font-size: 17px;
+                line-height: 1.2;
+                margin-top: 5px;
+                margin-bottom: 0;
+            a {
+                color: #383838;
+                    &:hover {
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+      }
+    }
+  }
+  .widget-tags {
+    ul {
+      margin: 0;
+      li {
+        display: inline-block;
+        a {
+            color: #656565;
+            border: 1px solid #dddddd;
+            border-radius: 15px;
+            display: inline-block;
+            font-weight: 500;
+            font-size: 15px;
+            padding: 0 23px;
+            margin-bottom: 9px;
+            margin-right: 8px;
+            height: 40px;
+            line-height: 38px;
+            // @include transition(all .3s ease-in-out);
+            @media #{$lg-device} {
+                font-size: 13px;
+                margin-right: 5px;
+                margin-bottom: 9px
+            }
+            &:hover {
+                background-color: $theme-color;
+                border-color: $theme-color;
+                color: $white;
+            }
+        }
+      }
+    }
+  } 
+}
+
+// Start Product Sidebar Wrapper
+.product-sidebar {
+
+  &-item {
+    margin-bottom: 35px;
+  }
+
+  &-title {
+    border-left: 2px solid $black-222;
+    color: $black-222;
+    font-size: 14px;
+    line-height: 1;
+    margin-bottom: 20px;
+    padding: 6px 0;
+    padding-left: 15px;
+    width: 100%
+  }
+
+  &-search-form {
+    .form-group {
+      position: relative;
+
+      .form-control {
+        background: $white;
+        border: 1px solid #ededed;
+        border-radius: 0;
+        box-shadow: none;
+        color: #434343;
+        font-size: 14px;
+        height: 34px;
+        padding: 0 40px 0 15px;
+        width: 100%;
+
+        @include placeholder {
+          color: #434343;
+        }
+      }
+
+      .btn-src {
+        background: none;
+        border: none;
+        color: $black-222;
+        font-size: 14px;
+        height: 34px;
+        line-height: 34px;
+        margin: 0;
+        outline: none;
+        padding: 0;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        cursor: pointer;
+        top: 0;
+        width: 34px;
+        @include transition(all .3s ease-out);
+
+        &:hover {
+          background-color: $black-222;
+          color: $theme-color;
+        }
+      }
+    }
+  }
+
+  &-nav-menu {
+    a {
+      display: block;
+      font-size: 14px;
+      margin-left: 20px;
+      color: $black-222;
+      line-height: 25px;
+      padding-left: 20px;
+      margin: 5px 0;
+      position: relative;
+      @include transition(all .3s ease-out);
+
+      &:before {
+        position: absolute;
+        content: "\f068";
+        font-family: Fontawesome;
+        left: 0;
+        top: 0;
+        transition: .3s;
+      }
+
+      &.active {
+        color: $theme-color;
+      }
+
+      &:hover {
+        color: $theme-color;
+      }
+    }
+  }
+
+  &-item {
+    line-height: normal;
+    display: block;
+    overflow: hidden;
+    padding: 5px 0;
+    margin-bottom: 20px;
+
+    .thumb {
+      float: left;
+      width: 30%;
+    }
+
+    .content {
+      float: left;
+      padding: 5px 0;
+      padding-left: 20px;
+      width: 70%;
+
+      .title {
+        color: $black-222;
+        font-size: 14px;
+        margin-bottom: 5px;
+        line-height: 1.6;
+
+        a {
+          color: $black-222;
+
+          &:hover {
+            color: $theme-color;
+          }
+        }
+      }
+
+      .product-review {
+        color: $theme-color;
+        display: inline-block;
+        font-size: 12px;
+        height: 14px;
+        letter-spacing: -1px;
+        width: 70px;
+      }
+
+      .product-price {
+        color: $black-222;
+        font-size: 14px;
+        display: inline-block;
+        margin-left: 25px;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &-banner {
+    img {
+      @include transition(all .4s ease-out);
+    }
+    
+    &:hover {
+      img {
+        opacity: .7;
+      }
+    }
+  }
+
+  &-tag {
+    a {
+      border: 1px solid $black-222;
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 25px;
+      padding: 4px 16px;
+      color: $black-222;
+      background: #fff;
+      text-align: center;
+      margin-bottom: 8px;
+      margin-right: 5px;
+
+      &:hover {
+        border-color: $theme-color;
+        background-color: $theme-color;
+        color: $white;
+      }
+    }
+  }
+}

@@ -1,0 +1,126 @@
+/*
+-----------------------------------------------------------------------
+    Contact CSS
+-----------------------------------------------------------------------
+*/
+
+.contact-area {
+  .container {
+    padding-top: 94px;
+    padding-bottom: 100px;
+    @media #{$lg-device} {
+      padding-top: 74px;
+      padding-bottom: 80px;
+    }
+  }
+  .section-title {
+    margin-bottom: 50px;
+    text-align: center;
+    @media #{$lg-device} {
+      margin-bottom: 30px;
+    }
+    h2 {
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-size: 30px;
+      font-weight: 500;
+      @media #{$lg-device} {
+        font-size: 26px;
+      }
+      @media #{$md-device} {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+.contact-info-area {
+  background-color: $white-f8;
+  .container {
+    padding-top: 100px;
+    padding-bottom: 70px;
+    @media #{$lg-device} {
+      padding-top: 80px;
+      padding-bottom: 50px;
+    }
+  }
+  .contact-info-item {
+    background-color: $white;
+    border-top: 2px solid $theme-color;
+    box-shadow: 0 0 30px 0 rgba($black, .05);
+    padding: 42px 25px 38px 40px;
+    margin-bottom: 30px;
+    @media #{$lg-device} {
+      padding: 44px 10px 42px 34px;
+    }
+    h4 {
+      color: $theme-color2;
+      font-weight: $font-weight-medium;
+      font-size: 15px;
+      line-height: 1;
+      letter-spacing: 1.5px;
+      margin-bottom: 18px;
+      @media #{$lg-device} {
+        margin-bottom: 10px;
+        font-size: 12px;
+      }
+    }
+    p {
+      color: $black;
+      margin: 0;
+      font-size: 17px;
+      font-weight: $font-weight-medium;
+      @media #{$lg-device} {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.search-area {
+  margin-top: 30px;
+  margin-bottom: 33px;
+  @media #{$lg-device} {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+
+.account-form-wrap {
+  box-shadow: 2px 2px 11px 0 rgb(0 0 0 / 10%);
+  background: $white-f3 none repeat scroll 0 0;
+  padding: 35px 60px 86px;
+  @media #{$xs-device} {
+    padding: 35px 20px 38px;
+  }
+
+  .content {
+    text-align: center;
+
+    .title {
+      color: $black-333;
+      font-size: 30px;
+      font-weight: $font-weight-normal;
+      margin-bottom: 5px;
+    }
+
+    p {
+      color: $black-666;
+      font-size: 15px;
+      margin-bottom: 49px;
+    }
+  }
+}
+
+.search-form-wrap {
+  .content {
+    text-align: center;
+    .title {
+      color: $heading-color;
+      font-size: 20px;
+      margin-bottom: 25px;
+      font-weight: 600;
+      text-transform: capitalize;
+    }
+  }
+}

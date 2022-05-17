@@ -1,0 +1,438 @@
+/*
+-----------------------------------------------------------------------
+  Common CSS
+-----------------------------------------------------------------------
+*/
+
+/*-------- Background Style Css --------*/
+.bg-img {
+  background: no-repeat center center;
+  background-size: cover;
+
+  &-tr {
+    background: no-repeat top right;
+  }
+
+  &-tl {
+    background: no-repeat top left;
+  }
+
+  &-br {
+    background: no-repeat bottom right;
+  }
+
+  &-bl {
+    background: no-repeat bottom left;
+  }
+
+  &-nr {
+    background: no-repeat center center;
+    background-size: contain;
+  }
+
+  &-rc {
+    background: no-repeat;
+    background-size: contain;
+  }
+}
+
+/*-------- Container Style Css --------*/
+.wrapper {
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media #{$lg-device} {
+    max-width: none;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+  & > [class*=col-] {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+/*-------- Gutter Style Css --------*/
+.no-gutter {
+  margin-right: 0;
+  margin-left: 0;
+  [class*=col-] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.row-gutter-12 {
+  margin-right: -6px;
+  margin-left: -6px;
+  [class*=col-] {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}
+
+.row-gutter-20 {
+  margin-right: -10px;
+  margin-left: -10px;
+  [class*=col-] {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/*-------- Spacing Style Css --------*/
+section {
+  .container,
+  .container-fluid {
+    padding-bottom: 70px;
+    padding-top: 70px;
+    @media #{$lg-device} {
+      padding-bottom: 60px;
+      padding-top: 60px;
+    }
+  }
+}
+
+/*-------- Button Style Css --------*/
+.btn-theme {
+  background-color: #434343;
+  border: 2px solid #434343;
+  color: $white;
+  display: inline-block;
+  font-weight: $font-weight-bold;
+  font-size: 16px;
+  line-height: 1;
+  position: relative;
+  padding: 10px 5px;
+  text-align: center;
+  width: 124px;
+  @include transition(all .3s ease-out);
+
+  &:hover {
+    background-color: transparent;
+    border: 2px solid $theme-color;
+    color: $theme-color;
+  }
+}
+
+.btn-link {
+  color: $black-333;
+  font-size: 15px;
+  font-weight: $font-weight-semi-bold;
+  text-decoration: underline;
+
+  &:hover {
+    color: $theme-color;
+    text-decoration: underline;
+  }
+}
+
+/*-------- Page Header Style Css --------*/
+.page-header-area {
+  background-color: $black;
+  padding: 92px 0 90px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  @media #{$md-device} {
+    padding: 90px 0 86px;
+  }
+}
+
+.page-header-content {
+  .title {
+    color: $white;
+    font-size: 29px;
+    font-weight: $font-weight-normal;
+    margin-bottom: 0px;
+    margin-top: 12px;
+    text-transform: capitalize;
+    @media #{$md-device} {
+      font-size: 25px;
+      margin-top: 0;
+    }
+    @media #{$xs-device} {
+      line-height: 40px;
+    }
+  }
+}
+
+.breadcrumb-area {
+  margin-bottom: 5px;
+
+  .breadcrumb {
+    background-color: transparent;
+    display: block;
+    flex-wrap: unset;
+    letter-spacing: 0;
+    margin-bottom: 0;
+    padding: 0;
+
+    li {
+      color: $theme-color;
+      display: inline-block;
+      font-size: 12px;
+      position: relative;
+      text-transform: capitalize;
+
+      a {
+        color: $white;
+
+        &:hover {
+          color: $theme-color;
+        }
+      }
+    }
+
+    .breadcrumb-sep {
+      color: $white;
+      vertical-align: 1px;
+      font-size: 10px;
+      margin-right: 5px;
+      margin-left: 4px;
+    }
+  }
+}
+
+/*-------- Pagination Style Css --------*/
+.pagination-content-wrap {
+  margin-top: 30px;
+  margin-bottom: 36px;
+  
+  .pagination-nav {
+    .pagination {
+      li {
+        margin-right: 9px;
+
+        a {
+          background: #fff;
+          border: 1px solid #ededed;
+          color: #222;
+          font-size: 15px;
+          display: inline-block;
+          height: 42px;
+          line-height: 40px;
+          width: 50px;
+          text-align: center;
+
+          &.prev,
+          &.next {
+            font-size: 14px;
+            width: 60px;
+          }
+
+          &.disabled {
+            cursor: not-allowed;
+          }
+
+          &.active {
+            color: $white;
+            background-color: $black-333;
+          }
+
+          &:hover {
+            color: $white;
+            background-color: $black-333;
+          }
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  &.border-top {
+    border-top: 1px solid #e5e5e5;
+    padding-top: 30px;
+  }
+}
+
+/*-------- Custom Color Style Css --------*/
+.bg-theme-color {
+  background-color: $theme-color !important;
+}
+
+/*-------- Swiper Button Style Css --------*/
+.swiper-container {
+  &.swiper-slide-gap {
+    padding: 0 15px;
+    margin: 0 -15px;
+  }
+
+  &:hover {
+    .swiper-button {
+      &-disabled {
+        opacity: 1;
+      }
+      &-prev,
+      &-next {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.swiper-button {
+  &-prev,
+  &-next {
+    background-color: $white;
+    border: 2px solid #cacaca;
+    color: #cacaca;
+    font-size: 26px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    opacity: 0;
+    @include transition(all .4s ease-out);
+
+    &:after {
+      display: none;
+      opacity: 1;
+    }
+
+    &.swiper-button-disabled {
+      opacity: 0;
+      cursor: pointer;
+      pointer-events: all;
+    }
+
+    &:hover {
+      background-color: $theme-color;
+      border-color: $theme-color;
+      color: $white;
+    }
+  }
+
+  &-prev {
+    left: 0;
+  }
+  &-next {
+    right: 0;
+  }
+}
+
+.pt-70 {
+  padding-top: 70px !important;
+  @media #{$lg-device} {
+    padding-top: 55px;
+  }
+}
+
+/*-------- Preloader Style Css --------*/
+.preloader-deactive {
+  .preloader-wrap {
+    display: none;
+  }
+}
+
+.preloader-wrap {
+  background-color: $white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 99999;
+  overflow: hidden;
+
+  .preloader {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    margin-left: -32px;
+    margin-top: -50px;
+    .dot {
+      height: 100%;
+      width: 100%;
+      display: block;
+      box-shadow: 0 0 20px 0 rgba(0,0,0,.15);
+      -webkit-box-shadow: 0 0 20px 0 rgba(0,0,0,.15);
+      -webkit-animation: la-rotateplane 1.2s infinite ease-in-out;
+      animation: la-rotateplane 1.2s infinite ease-in-out;
+      border-radius: 3px;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      background-color: $theme-color;
+    }
+  }
+}
+
+@-webkit-keyframes la-rotateplane {
+  0% {
+      -webkit-transform: perspective(120px)
+  }
+
+  50% {
+      -webkit-transform: perspective(120px) rotateY(180deg)
+  }
+
+  100% {
+      -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg)
+  }
+}
+
+@keyframes la-rotateplane {
+  0% {
+      transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+  }
+
+  50% {
+      transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+  }
+
+  100% {
+      transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg)
+  }
+}
+
+/*-------- Scroll To Top Style Css --------*/
+.scroll-to-top {
+  box-shadow: 0 0 12px -2px rgb($white, .25);
+  bottom: -60px;
+  background-color: $black-333;
+  color: $white;
+  position: fixed;
+  right: 50px;
+  display: block;
+  padding: 0;
+  width: 45px;
+  height: 50px;
+  border-radius: 0;
+  text-align: center;
+  font-size: 18px;
+  line-height: 50px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  @include transition (all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1));
+  z-index: 999;
+
+  &:hover {
+    background-color: $theme-color;
+  }
+
+  &.show {
+    visibility: visible;
+    opacity: 1;
+    bottom: 50px;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

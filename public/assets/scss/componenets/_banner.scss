@@ -1,0 +1,183 @@
+/*
+-----------------------------------------------------------------------
+    Home Slider CSS
+-----------------------------------------------------------------------
+*/
+
+.home-slider-area {
+  .home-slider-container {
+    position: relative;
+
+    .home-slider-wrapper {
+      position: relative;
+
+      &.slider {
+        &-default {
+            .swiper-slide {
+              &-active {
+                .slider-content-area {
+                  .slider-content {
+                    .sub-title {
+                      @include animation(800ms ease-in-out 0s normal none 1 running zoomIn);
+                    }
+                    .title {
+                      @include animation(1100ms ease-in-out 0s normal none 1 running bounceIn);
+                    }
+                    h4 {
+                      @include animation(900ms ease-in-out 0s normal none 1 running zoomIn);
+                    }
+                    p {
+                      @include animation(600ms ease-in-out 0s normal none 1 running zoomIn);
+                    }
+                    .btn-slider {
+                      @include animation(1200ms ease-in-out 0s normal none 1 running slideInUp);
+                    }
+                  }
+                }
+              }
+            }
+
+          .slider-content-area {
+            height: 800px;
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            @media #{$sm-device} {
+              height: 480px;
+            }
+
+            .slider-content {
+              max-width: 590px;
+              margin-right: 344px;
+              @media #{$xl-device} {
+                margin-right: 70px;
+              }
+              @media #{$sm-device} {
+                margin-right: auto;
+                margin-left: auto;
+                text-align: center;
+              }
+
+              .sub-title,
+              .title,
+              h4,
+              p,
+              .btn-slider {
+                -webkit-animation-duration: 1s;
+                animation-duration: 1s;
+                -webkit-animation-fill-mode: both;
+                animation-fill-mode: both;
+                -webkit-animation-name: fadeOut;
+                animation-name: fadeOut;
+              }
+
+              .sub-title {
+                color: $black;
+                font-size: 16px;
+                font-weight: $font-weight-semi-bold;
+                text-transform: uppercase;
+                margin-bottom: 4px;
+              }
+
+              .title {
+                color: $black;
+                font-size: 50px;
+                font-weight: 900;
+                line-height: 1;
+                margin-bottom: 0;
+                @media #{$sm-device} {
+                  font-size: 40px;
+                }
+              }
+
+              h4 {
+                color: $black;
+                font-size: 30px;
+                font-weight: $font-weight-normal;
+                margin-bottom: 21px;
+                margin-top: 15px;
+                line-height: 1;
+                @media #{$sm-device} {
+                  font-size: 20px;
+                }
+              }
+
+              p {
+                color: $black;
+                font-size: 17px;
+                line-height: 26px;
+                margin-bottom: 25px;
+                @media #{$sm-device} {
+                  font-size: 14px;
+                }
+              }
+
+              .btn-slider {
+                background-color: $theme-color;
+                border-radius: 50px;
+                color: $white;
+                display: inline-block;
+                font-size: 14px;
+                font-weight: $font-weight-semi-bold;
+                padding: 15px 46px;
+                @media #{$sm-device} {
+                  padding: 12px 38px;
+                }
+
+                &:hover {
+                  background-color: $white;
+                  color: $theme-color;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .swiper-button {
+      &-next,
+      &-prev {
+        background-color: $white;
+        color: #363636;
+        font-size: 28px;
+        line-height: 60px;
+        opacity: 0;
+        height: 60px;
+        width: 60px;
+        @include transition(all .4s ease-out);
+        @media #{$sm-device} {
+          display: none;
+        }
+
+        &:after {
+          display: none;
+        }
+
+        &:hover {
+          background-color: $theme-color;
+          color: $white;
+        }
+      }
+
+      &-next {
+        right: 30px;
+      }
+      &-prev {
+        left: 30px;
+      }
+    }
+
+    &:hover {
+      .swiper-button {
+        &-next,
+        &-prev {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

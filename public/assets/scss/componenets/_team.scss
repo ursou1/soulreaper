@@ -1,0 +1,62 @@
+/*
+-----------------------------------------------------------------------
+    Team CSS
+-----------------------------------------------------------------------
+*/
+
+.team-item {
+  .inner-content {
+    position: relative;
+    @media #{$sm-device} {
+      margin-bottom: 30px;
+    }
+
+    .thumb {
+      img {
+        @include transition(all .5s ease-out);
+      }
+    }
+
+    .content {
+      background-color: rgba($black, 0.8);
+      padding: 10px 0;
+      text-align: center;
+      position: absolute;
+      width: calc(100% - 60px);
+      bottom: 30px;
+      left: 50%;
+      @include transform (translate(-50%, 0px) scaleY(0));
+      @include transition(all .5s ease-out);
+
+      .title {
+        color: $white;
+        font-size: 18px;
+        font-weight: $font-weight-normal;
+        line-height: 1;
+        margin-bottom: 0;
+
+        a {
+          color: $white;
+
+          &:hover {
+            color: $theme-color;
+          }
+        }
+      }
+    }
+
+    &:hover {
+      .thumb {
+        img {
+          filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /></filter></svg>#filter');
+          -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+        }
+      }
+
+      .content {
+        @include transform (translate(-50%, 0px) scaleY(1));
+      }
+    }
+  }
+}

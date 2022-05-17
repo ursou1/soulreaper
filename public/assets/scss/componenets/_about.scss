@@ -1,0 +1,47 @@
+/*
+-----------------------------------------------------------------------
+    About CSS
+-----------------------------------------------------------------------
+*/
+
+.about-thumb {
+  position: relative;
+  overflow: hidden;
+
+  img {
+    @include transition(all .5s ease-out);
+  }
+
+  &:hover {
+    img {
+      @include scale(1.2);
+    }
+  }
+}
+
+.about-content {
+  margin-top: -10px;
+  @media #{$md-device} {
+    margin-top: 40px;
+  }
+  .title {
+    font-size: 36px;
+    font-weight: $font-weight-medium;
+    color: #252525;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+  }
+
+  p {
+    color: $theme-color2;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .btn-theme {
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 12px;
+    text-transform: capitalize;
+  }
+}

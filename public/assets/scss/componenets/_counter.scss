@@ -1,0 +1,141 @@
+/*
+-----------------------------------------------------------------------
+  Counter CSS
+-----------------------------------------------------------------------
+*/
+
+.ht-countdown {
+  &-style {
+    display: inline-block;
+    @include transition(all .3s ease-out);
+
+    .countdown-item {
+      background-color: $theme-color;
+      border-radius: 0;
+      color: $white;
+      display: inline-block;
+      font-size: 14px;
+      height: 60px;
+      line-height: 1;
+      margin-right: 4px;
+      padding-top: 12px;
+      text-align: center;
+      width: 60px;
+
+      &__time {
+        display: block;
+        font-size: 18px;
+        line-height: 1;
+        color: $white;
+        margin-bottom: 5px;
+      }
+
+      &__label {
+        color: $white;
+        line-height: 1;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &-style2 {
+    display: inline-block;
+    margin-bottom: 50px;
+    margin-top: 25px;
+
+    .countdown-item {
+      background-color: $gray-lighter;
+      border-radius: 0;
+      color: $black-333;
+      display: inline-block;
+      font-size: 14px;
+      height: 80px;
+      margin-right: 13px;
+      padding-top: 18px;
+      text-align: center;
+      width: 80px;
+      @media #{$xs-device} {
+        font-size: 13px;
+        width: 50px;
+        height: 70px;
+        padding-top: 14px;
+      }
+
+      &__time {
+        display: block;
+        font-size: 26px;
+        line-height: 1;
+        color: $theme-color2;
+        margin-bottom: 0;
+        @media #{$xs-device} {
+          font-size: 20px;
+        }
+      }
+
+      &__label {
+        color: $theme-color2;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &-style3 {
+    display: inline-block;
+    margin-top: 20px;
+
+    .countdown-item {
+      background-color: $gray-lighter;
+      border-radius: 0;
+      color: $black-333;
+      display: inline-block;
+      font-size: 14px;
+      height: 80px;
+      margin-right: 5px;
+      padding-top: 18px;
+      text-align: center;
+      width: 63px;
+      @media #{$sm-device} {
+        font-size: 12px;
+        height: 62px;
+        width: 50px;
+      }
+
+      &__time {
+        display: block;
+        font-size: 24px;
+        line-height: 1;
+        color: $theme-color2;
+        margin-bottom: 0;
+        @media #{$sm-device} {
+          font-size: 16px;
+        }
+      }
+
+      &__label {
+        color: $theme-color2;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

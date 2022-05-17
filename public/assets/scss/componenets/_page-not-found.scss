@@ -1,0 +1,48 @@
+/*
+-----------------------------------------------------------------------
+  Page Not Found CSS
+-----------------------------------------------------------------------
+*/
+
+.page-not-found {
+  &-content {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 8px;
+    h1 {
+      color: $theme-color;
+      font-size: 200px;
+      font-weight: $font-weight-semi-bold;
+      margin-bottom: 32px;
+    }
+    h2 {
+      color: $black-555;
+      font-size: 35px;
+      font-weight: $font-weight-normal;
+      margin-bottom: 24px;
+    }
+    p {
+      color: $black-555;
+      font-size: 22px;
+      font-weight: $font-weight-normal;
+      margin: 20px auto 30px;
+      max-width: 700px;
+      line-height: 25px;
+    }
+    .btn-back {
+      border-radius: 35px;
+      background-color: $theme-color;
+      color: $white;
+      display: inline-block;
+      font-size: 12px;
+      font-weight: $font-weight-semi-bold;
+      height: 40px;
+      line-height: 40px;
+      padding: 0 30px;
+      &:hover {
+        background-color: $black-333;
+        color: $theme-color;
+      }
+    }
+  }
+}

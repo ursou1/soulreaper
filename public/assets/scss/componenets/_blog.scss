@@ -1,0 +1,337 @@
+/*
+-----------------------------------------------------------------------
+    Blog CSS
+-----------------------------------------------------------------------
+*/
+
+.blog-area {
+  .container {
+    padding-bottom: 40px;
+    padding-top: 60px;
+  }
+}
+
+.post-item {
+  .inner-content {
+    margin-bottom: 30px;
+    @include transition(all .4s ease-out);
+    .thumb {
+      img {
+        @include transition(all .4s ease-out);
+      }
+
+      &:hover {
+        img {
+          opacity: 0.7;
+        }
+      }
+    }
+
+    .content {
+      background-color: #f6f7f8;
+      padding: 30px 30px 38px 30px;
+      .title {
+        font-size: 18px;
+        margin-bottom: 12px;
+        text-transform: capitalize;
+        line-height: 1.6;
+
+        a {
+          color: $black;
+
+          &:hover {
+            color: $theme-color;
+          }
+        }
+      }
+
+      .meta {
+        margin-bottom: 4px;
+
+        li {
+          color: $theme-color2;
+          display: inline-block;
+          font-size: 13px;
+          font-weight: $font-weight-medium;
+          text-transform: capitalize;
+        }
+      }
+
+      p {
+        color: #363636;
+        font-size: 14px;
+        line-height: 25px;
+        margin-bottom: 21px;
+      }
+
+      .btn-theme {
+        font-weight: 500;
+        font-size: 13px;
+        padding: 10px 10px;
+        width: 107px;
+        text-transform: capitalize;
+        &:hover {
+          background-color: $black;
+          color: $white;
+        }
+      }
+    }
+
+    &:hover {
+      box-shadow: 0 5px 10px rgb(0 0 0 / 15%);
+      .content {
+        .btn-theme {
+          border-color: $theme-color;
+          background-color: $theme-color;
+        }
+      }
+    }
+  }
+}
+
+.blog-details-area {
+  margin-bottom: 10px;
+}
+
+.blog-details-content-wrap {
+  @media #{$md-device} {
+    margin-bottom: 40px;
+  }
+
+  .content-info {
+    margin-top: 40px;
+    text-align: left;
+
+    .title {
+      font-size: 34px;
+      margin-bottom: 36px;
+      @media #{$lg-device} {
+        font-size: 28px;
+        margin-bottom: 25px;
+      }
+    }
+
+    .meta {
+      margin-bottom: 15px;
+      @media #{$lg-device} {
+        margin-bottom: 10px;
+      }
+
+      li {
+        color: #636363;
+        display: inline-block;
+        font-size: 13px;
+        margin-bottom: 0;
+        text-transform: capitalize;
+      }
+
+      .post-separator {
+        margin: 0 10px;
+      }
+    }
+  }
+
+  .thumb {
+    img {
+      @media #{$md-device} {
+        width: 100%;
+      }
+    }
+  }
+
+  .content {
+    p {
+      color: $black-222;
+      margin-top: 26px;
+      font-size: 14px;
+      line-height: 26px;
+      letter-spacing: .3px;
+    }
+
+    blockquote {
+      color: $heading-color;
+      background-color: $white-f6;
+      border: 1px solid #ededed;
+      border-left: 5px solid #f76b6a;
+      line-height: 26px;
+      font-size: 14px;
+      font-style: italic;
+      margin: 40px 0 40px 0;
+      padding: 30px 45px;
+      @media #{$lg-device} {
+        margin-left: 0;
+      }
+      @media #{$xs-device} {
+        padding: 22px 18px;
+      }
+    }
+  }
+
+  .blog-details-footer {
+    .single-post-tag {
+      border-top: 1px solid #ebebeb;
+      border-bottom: 1px solid #ebebeb;
+      margin: 30px 0;
+      padding: 13px 0;
+      text-align: center;
+
+      span {
+        color: $black-222;
+        font-size: 13px;
+      }
+
+      a {
+        color: $black-222;
+        font-size: 13px;
+
+        &:hover {
+          color: $theme-color;
+        }
+      }
+    }
+    .social-sharing {
+      text-align: center;
+
+      .title {
+        color: #6b6b6b;
+        font-size: 13px;
+        margin-top: 58px;
+        margin-bottom: 18px;
+        font-weight: 500;
+        text-transform: capitalize;
+      }
+
+      .social-icon {
+        margin-bottom: 58px;
+
+        li {
+          display: inline-block;
+
+          &:last-child {
+            a {
+              margin-right: 0;
+            }
+          }
+
+          a {
+            background-color: #f5f5f5;
+            border-radius: 100%;
+            color: #636363;
+            display: block;
+            font-size: 12px;
+            height: 30px;
+            line-height: 28px;
+            margin-right: 10px;
+            width: 30px;
+            border: 1px solid #eee;
+
+            &:hover {
+              background-color: $theme-color;
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+    .article-next-previous {
+      border-top: 1px solid #eceff8;
+      border-bottom: 1px solid #eceff8;
+      margin: 0;
+      padding: 60px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      a {
+        color: $black-222;
+        font-size: 14px;
+
+        &:hover {
+          color: $theme-color;
+        }
+      }
+    }
+  }
+}
+
+.comment-view-area {
+  padding-top: 62px;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 20px;
+
+  .title {
+    font-size: 17px;
+    margin-bottom: 21px;
+  }
+
+  .comment-view-content {
+    .single-comment {
+      background: #fff;
+      border: 1px solid #ededed;
+      margin: 0 0 20px;
+      padding: 30px;
+      padding-bottom: 33px;
+      width: 100%;
+
+      .author-wrap {
+        .author-pic {
+          float: left;
+          margin-right: 20px;
+          @media #{$xs-device} {
+            float: none;
+            margin-bottom: 30px;
+          }
+        }
+
+        .author-info {
+          border: none;
+          overflow: hidden;
+          position: relative;
+
+          .title {
+            color: $black-222;
+            display: block;
+            font-size: 15px;
+            margin-bottom: 4px;
+            text-transform: capitalize;
+
+            a {
+              color: $black-222;
+
+              &:hover {
+                color: $theme-color;
+              }
+            }
+          }
+          .sub-title {
+            color: $black-222;
+            font-size: 13px;
+            font-weight: $font-weight-normal;
+            font-style: italic;
+            margin-bottom: 15px;
+            line-height: 19px;
+          }
+          p {
+            color: $black-222;
+            font-size: 14px;
+            line-height: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.comment-form-area {
+  margin-top: 20px;
+  .title {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  p {
+    color: $black-222;
+    font-size: 12px;
+    margin-bottom: 28px;
+  }
+}
