@@ -64,33 +64,33 @@
                         </li>
 
                         <li class="mini-cart">
-                            <a class="action-item" href="#/">
+                            <a class="action-item" href="{{ route('cart') }}">
                                 <i class="zmdi zmdi-shopping-cart-plus icon"></i>
                                 <span class="cart-quantity">2</span>
                             </a>
                             <div class="mini-cart-dropdown">
-                                <div class="cart-item">
-                                    <div class="thumb">
-                                        <img class="w-100" src="assets/img/shop/cart/1.jpg" alt="Image-HasTech">
-                                    </div>
-                                    <div class="content">
-                                        <h5 class="title"><a href="#/">Literature Classical - s</a></h5>
-                                        <span class="product-quantity">1 ×</span>
-                                        <span class="product-price">$79.00</span>
-                                        <a class="cart-trash" href="javascript:void(0);"><i class="fa fa-trash"></i></a>
-                                    </div>
-                                </div>
-                                <div class="cart-item">
-                                    <div class="thumb">
-                                        <img class="w-100" src="assets/img/shop/cart/2.jpg" alt="Image-HasTech">
-                                    </div>
-                                    <div class="content">
-                                        <h5 class="title"><a href="#/">Fit Wool Suit - m / gold</a></h5>
-                                        <span class="product-quantity">1 ×</span>
-                                        <span class="product-price">$80.00</span>
-                                        <a class="cart-trash" href="javascript:void(0);"><i class="fa fa-trash"></i></a>
-                                    </div>
-                                </div>
+{{--                                <div class="cart-item">--}}
+{{--                                    <div class="thumb">--}}
+{{--                                        <img class="w-100" src="assets/img/shop/cart/1.jpg" alt="Image-HasTech">--}}
+{{--                                    </div>--}}
+{{--                                    <div class="content">--}}
+{{--                                        <h5 class="title"><a href="#/">Literature Classical - s</a></h5>--}}
+{{--                                        <span class="product-quantity">1 ×</span>--}}
+{{--                                        <span class="product-price">$79.00</span>--}}
+{{--                                        <a class="cart-trash" href="javascript:void(0);"><i class="fa fa-trash"></i></a>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                                <div class="cart-item">--}}
+{{--                                    <div class="thumb">--}}
+{{--                                        <img class="w-100" src="assets/img/shop/cart/2.jpg" alt="Image-HasTech">--}}
+{{--                                    </div>--}}
+{{--                                    <div class="content">--}}
+{{--                                        <h5 class="title"><a href="#/">Fit Wool Suit - m / gold</a></h5>--}}
+{{--                                        <span class="product-quantity">1 ×</span>--}}
+{{--                                        <span class="product-price">$80.00</span>--}}
+{{--                                        <a class="cart-trash" href="javascript:void(0);"><i class="fa fa-trash"></i></a>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
                                 <div class="cart-total-money">
                                     <h5>Total: <span class="money">$159.00</span></h5>
                                 </div>

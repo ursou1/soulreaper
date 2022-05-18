@@ -3,8 +3,7 @@
 
     @include('parts.header')
 
-    <main>
-
+<main>
 <!--wrapper start-->
 <div class="wrapper">
   <main class="main-content">
