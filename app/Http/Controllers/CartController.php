@@ -10,7 +10,6 @@ class CartController extends Controller
     public function index(Request $request)
     {
         $session = $request->session()->get('cart');
-        //dd ($cart);
         return view('cart');
     }
 
@@ -37,16 +36,17 @@ class CartController extends Controller
         {
             $cart[$id]['count']++;
             session()->put('cart', $cart);
+            return redirect()-> route('cart');
         }
-        else
-        {
-            $cart[$id] = [
-                "title" => $product->title,
-                "count" => 1,
-                "image" => $product->image,
-                "cost" => $product->cost
-            ];
-        }
+
+        $cart[$id] = [
+            "id" => $product->id,
+            "title" => $product->title,
+            "count" => 1,
+            "image" => $product->image,
+            "cost" => $product->cost
+        ];
+
         session()->put('cart', $cart);
         return redirect()->route('cart');
     }

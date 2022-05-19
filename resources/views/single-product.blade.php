@@ -48,7 +48,7 @@
                                                         <input type="text" id="quantity" title="Quantity" value="1">
                                                     </div>
                                                 </div>
-                                                <a class="btn-product-add" href="#/">Add to cart</a>
+                                                <a class="btn-product-add" href="/add-to-cart/{{$product->id}}">Add to cart</a>
                                             </div>
                                             <div class="product-wishlist">
                                                 <a href="wishlist.html" class="btn-wishlist">Add to wishlist</a>

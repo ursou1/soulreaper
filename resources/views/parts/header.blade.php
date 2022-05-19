@@ -4,8 +4,8 @@
             <div class="col-6 col-sm-4 col-lg-3">
                 <div class="header-logo-area">
                     <a href="/">
-                        <img class="logo-main" src="assets/img/logo.png" alt="Logo" />
-                        <img class="logo d-none" src="assets/img/logo-light.png" alt="Logo" />
+                        <img class="logo-main" src={{asset("assets/img/logo.png")}} alt="Logo" />
+                        <img class="logo d-none" src={{asset("assets/img/logo-light.png")}} alt="Logo" />
                     </a>
                 </div>
             </div>
@@ -49,7 +49,7 @@
                             </ul>
                         </li>
 
-                        <li><a href="{{ route('livewire') }}">Contact</a></li>
+                        <li><a href="">Contact</a></li>
                         <li><a href="about">About</a></li>
                     </ul>
                 </div>
@@ -64,41 +64,21 @@
                         </li>
 
                         <li class="mini-cart">
-                            <a class="action-item" href="{{ route('cart') }}">
-                                <i class="zmdi zmdi-shopping-cart-plus icon"></i>
-                                <span class="cart-quantity">2</span>
-                            </a>
-                            <div class="mini-cart-dropdown">
-{{--                                <div class="cart-item">--}}
-{{--                                    <div class="thumb">--}}
-{{--                                        <img class="w-100" src="assets/img/shop/cart/1.jpg" alt="Image-HasTech">--}}
-{{--                                    </div>--}}
-{{--                                    <div class="content">--}}
-{{--                                        <h5 class="title"><a href="#/">Literature Classical - s</a></h5>--}}
-{{--                                        <span class="product-quantity">1 ×</span>--}}
-{{--                                        <span class="product-price">$79.00</span>--}}
-{{--                                        <a class="cart-trash" href="javascript:void(0);"><i class="fa fa-trash"></i></a>--}}
-{{--                                    </div>--}}
+{{--                            <a class="action-item" href="{{ route('cart') }}">--}}
+{{--                                <i class="zmdi zmdi-shopping-cart-plus icon"></i>--}}
+{{--                                <span class="cart-quantity">2</span>--}}
+{{--                            </a>--}}
+{{--                            <div class="mini-cart-dropdown">--}}
+
+{{--                                <div class="cart-total-money">--}}
+{{--                                    <h5>Total: <span class="money">$159.00</span></h5>--}}
 {{--                                </div>--}}
-{{--                                <div class="cart-item">--}}
-{{--                                    <div class="thumb">--}}
-{{--                                        <img class="w-100" src="assets/img/shop/cart/2.jpg" alt="Image-HasTech">--}}
-{{--                                    </div>--}}
-{{--                                    <div class="content">--}}
-{{--                                        <h5 class="title"><a href="#/">Fit Wool Suit - m / gold</a></h5>--}}
-{{--                                        <span class="product-quantity">1 ×</span>--}}
-{{--                                        <span class="product-price">$80.00</span>--}}
-{{--                                        <a class="cart-trash" href="javascript:void(0);"><i class="fa fa-trash"></i></a>--}}
-{{--                                    </div>--}}
+{{--                                <div class="cart-btn">--}}
+{{--                                    <a href="cart">View Cart</a>--}}
+{{--                                    <a href="checkout.html">Checkout</a>--}}
 {{--                                </div>--}}
-                                <div class="cart-total-money">
-                                    <h5>Total: <span class="money">$159.00</span></h5>
-                                </div>
-                                <div class="cart-btn">
-                                    <a href="cart">View Cart</a>
-                                    <a href="checkout.html">Checkout</a>
-                                </div>
-                            </div>
+{{--                            </div>--}}
+                             <livewire:cart/>
                         </li>
                     </ul>
                 </div>

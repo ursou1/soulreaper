@@ -45,6 +45,7 @@ Route::get('/contact', function () {
 
 Route::get('/', [App\Http\Controllers\ProductController::class, 'index']);
 Route::get('/single-product/{slug}', [App\Http\Controllers\ProductController::class, 'singleProduct'])->name('single-product');
-Route::get('cart', [App\Http\Controllers\CartController::class, 'index'])->name('cart');
-Route::view('/livewire', 'livewire')->name('livewire');;
+Route::get('/cart', [App\Http\Controllers\CartController::class, 'index'])->name('cart');
+Route::view('/livewire', 'livewire');
+Route::get('/add-to-cart/{id}', [\App\Http\Controllers\CartController::class,'add'])->name('add-to-cart');
 
