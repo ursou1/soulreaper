@@ -2,3 +2,6 @@
 
 <p align="center"><a href="https://vk.com/timon_ka" target="_blank"><img src="https://user-images.githubusercontent.com/71076236/168779726-3161da3b-08ee-4107-8aae-d6e8d3dd42d9.jpg" width="700" ></a></p>
 
+<p align="center"><a href="https://takprosto.cc/wp-content/uploads/s/syrnye-krekery/thumb.jpg" target="_blank"><img src="https://user-images.githubusercontent.com/71076236/169299867-5d0cf734-547b-4613-858f-0a851f728c91.png" width="700" ></a></p>
+
+
