@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Livewire\NotificationDemo;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,4 +49,4 @@ Route::get('/single-product/{slug}', [App\Http\Controllers\ProductController::cl
 Route::get('/cart', [App\Http\Controllers\CartController::class, 'index'])->name('cart');
 Route::view('/livewire', 'livewire');
 Route::get('/add-to-cart/{id}', [\App\Http\Controllers\CartController::class,'add'])->name('add-to-cart');
-
+Route::get('/notification', NotificationDemo::class)->name('notification');

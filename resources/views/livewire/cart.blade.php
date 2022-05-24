@@ -1,6 +1,8 @@
+<div>
+
 <a class="action-item" href="#/">
     <i class="zmdi zmdi-shopping-cart-plus icon"></i>
-    <span class="cart-quantity">2</span>
+    <span class="cart-quantity">{{$totalCount}}</span>
 </a>
 <div class="mini-cart-dropdown">
 
@@ -30,4 +32,5 @@
         <a href="cart">View Cart</a>
         <a href="checkout.html">Checkout</a>
     </div>
+</div>
 </div>

@@ -42,8 +42,12 @@
     <!--[if lt IE 9]>
     <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
+
+
     <![endif]-->
     @livewireStyles
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -96,6 +100,26 @@
 
       <!--=== jQuery Custom Js ===-->
      <script src={{ asset("assets/js/custom.js") }}></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     </div>
 @livewireScripts
+
+    <script>
+
+        window.addEventListener('alert', event => {
+
+            toastr[event.detail.type](event.detail.message,
+
+                event.detail.title ?? ''), toastr.options = {
+
+                "closeButton": true,
+
+                "progressBar": true,
+
+            }
+
+        });
+
+    </script>
+
 </body>

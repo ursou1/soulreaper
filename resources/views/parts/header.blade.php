@@ -26,7 +26,7 @@
                                 </li>
                                 <li class="mega-menu-item"><a href="#/" class="mega-title">Shop Pages</a>
                                     <ul>
-                                        <li><a href="login.html">My Account</a></li>
+                                        <li><a href="{{ route('notification') }}">AlertTest</a></li>
                                         <li><a href="wishlist.html">Wishlist</a></li>
                                         <li><a href="cart.html">Cart</a></li>
                                         <li><a href="checkout.html">Checkout</a></li>
