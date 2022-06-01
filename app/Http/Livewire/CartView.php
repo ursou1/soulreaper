@@ -35,7 +35,7 @@ class CartView extends Component
             session()->put('cart', $cart);
         }
         $this->render();
-//        $this->emit('cartChanged');
+        $this->emit('cartChanged');
     }
 
     public function increment($id)
@@ -47,7 +47,7 @@ class CartView extends Component
             $cart[$id]['count']++;
             session()->put('cart', $cart);
         }
-//        $this->emit('cartChanged');
+        $this->emit('cartChanged');
     }
 
     public function decrement($id)
@@ -59,7 +59,7 @@ class CartView extends Component
             $cart[$id]['count']--;
             session()->put('cart', $cart);
         }
-//        $this->emit('cartChanged');
+        $this->emit('cartChanged');
 
     }
 }
